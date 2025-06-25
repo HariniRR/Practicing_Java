@@ -1,7 +1,7 @@
 //You just need to take string input and return the string by capitalizing the first character of the string.
 import java.io.*;
 import java.util.*;
-public class StringCapitalizing {
+public class Stringcapitalizing {
     public static void main(String args[] ) throws Exception {
         Scanner sc=new Scanner(System.in);
         String myString=sc.nextLine();
