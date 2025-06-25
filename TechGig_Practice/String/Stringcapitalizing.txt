@@ -1,0 +1,13 @@
+//You just need to take string input and return the string by capitalizing the first character of the string.
+import java.io.*;
+import java.util.*;
+public class StringCapitalizing {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc=new Scanner(System.in);
+        String myString=sc.nextLine();
+        String str=myString.substring(0, 1).toUpperCase() + myString.substring(1);
+        System.out.print(str);
+    	//Write code here
+
+   }
+}
