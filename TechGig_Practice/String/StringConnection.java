@@ -20,6 +20,7 @@ public class StringConnection {
       String str2=s.nextLine().trim();
       String str3=str1+str2;
       System.out.print(str3);
+	   s.close();
 	//Write code here
 
    }
