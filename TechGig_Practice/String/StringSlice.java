@@ -18,6 +18,7 @@ public class StringSlice {
       int st=s.nextInt();
       int end=s.nextInt() +1;
       System.out.print(inputstr.substring(st,end));
+	   s.close();
 	//Write code here
 
    }
