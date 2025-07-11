@@ -8,7 +8,7 @@ Make the object of class BOWLER.*/
 
 import java.io.*;
 import java.util.*;
-public class CandidateCode {
+public class BatBowler {
    public static void main(String args[] ) throws Exception {
       Batsman bat=new Batsman();
       Bowler ball=new Bowler();
