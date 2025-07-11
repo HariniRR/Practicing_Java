@@ -22,7 +22,7 @@ public class StringSlice {
 
    }
 }
-/* The inputString.substring(start, end) or getSlice(inputString, start, end) method in Java returns the part of the string from start (inclusive) to end (exclusive).
+// The inputString.substring(start, end) method in Java returns the part of the string from start (inclusive) to end (exclusive).
 
 
 
