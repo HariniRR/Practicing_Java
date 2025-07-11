@@ -14,7 +14,7 @@ Make the object of class THIRD.*/
 
 import java.io.*;
 import java.util.*;
-public class CandidateCode {
+public class OneTwoThree {
     public static void main(String args[] ) throws Exception {
         Third thre=new Third();
         thre.one();
