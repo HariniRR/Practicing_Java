@@ -26,7 +26,7 @@ class MyCalculator {
         } else if (n == 0 && p == 0) {
             throw new MyException("n and p should not be zero.");
         }
-        return (long) Math.pow(n, p); 
+        return (long) Math.pow(n, p); //return n^p;
     }
 }
 
