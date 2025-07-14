@@ -10,41 +10,43 @@ Constraints
 Output Format
 Each line of the output contains the result , if both n and p are positive. If either n or p is negative, the output contains "n and p should be non-negative". If both n and p are zero, the output contains "n and p should not be zero.".*/
 
-
 import java.io.*;
 import java.util.*;
-class MyException extends Exception{
-	public MyException(String a) {
-		super(a);
-	}
+
+class MyException extends Exception {
+    public MyException(String message) {
+        super(message);
+    }
 }
+
+class MyCalculator {
+    public long power(int n, int p) throws MyException {
+        if (n < 0 || p < 0) {
+            throw new MyException("n or p should not be negative.");
+        } else if (n == 0 && p == 0) {
+            throw new MyException("n and p should not be zero.");
+        }
+        return (long) Math.pow(n, p); 
+    }
+}
+
 public class CandidateCode {
-    public static void main(String args[] ) throws MyException {
-        try{
-            Scanner s=new Scanner(System.in);
-        while(true){
-            int p=s.nextInt();
-            int n=s.nextInt();
-            if(p<0 || n<0){
-                throw new MyException("n or p should not be negative.");
-            }
-            else if(p==0&&n==0){
-                throw new MyException("n and p should not be zero.");
-            }
-            else{
-                System.out.println(mc.power(p,n));
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        MyCalculator mc = new MyCalculator();
+
+        while (s.hasNextInt()) { // Check if there is more input
+            try {
+                int n = s.nextInt();
+                int p = s.nextInt();
+                System.out.println(mc.power(n, p));
+            } catch (MyException e) {
+                System.out.println("java.lang.Exception: " + e.getMessage());
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter two integers.");
+                s.next(); // Clear the invalid input
             }
         }
-        s.close();
-    	//Write code here
-
-   }
-   catch(Exception e){
-       System.out.println("Caught Exception: " + e.getMessage());
-   }
-}}
-class MyCalculator{
-    public long power(int a,int b){
-        return a^b;
+        s.close(); 
     }
 }
